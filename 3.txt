@@ -1,7 +1,0 @@
-> #Finding the total biomass of 3 white-throated woodrats
-> ind_mass_g <- 250
-> number_ind <- 3
-> biomass_g <- grams*number
-> biomass_kg <- biomass_g/1000
-> print(biomass_kg)
-[1] 0.75
