@@ -1,0 +1,13 @@
+> library(readr)
+Warning message:
+package ‘readr’ was built under R version 3.4.2 
+> shrub_dimensions_labeled <- read_csv("C:/Users/chloe.nelson/Downloads/shrub-dimensions-labeled.csv")
+Parsed with column specification:
+cols(
+  shrubID = col_character(),
+  length = col_double(),
+  width = col_double(),
+  height = col_double()
+)
+> View(shrub_dimensions_labeled)
+> 
