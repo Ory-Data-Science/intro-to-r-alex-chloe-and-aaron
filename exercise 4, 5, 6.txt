@@ -1,0 +1,121 @@
+# exercise 4
+abs(-15.5)
+help("round")
+round(4.483847, digits = 2)
+round(4.483847, digits = 1)
+round(3.8)
+help("tolower")
+tolower(species)
+toupper(species)
+tolower("species")
+toupper("species")
+tolower("SPECIES")
+sqrt(2.6)
+class(sqrt(2.6))
+sqrt(2.6) <- mass_kg
+mass_kg <- sqrt(2.6)
+class(sqrt(2.6))
+mass_kg
+round(mass_kg, digits = 2)
+mass_g <- round(mass_kg, digits = 2)
+mass_g
+mass_g <- round(sqrt(2.6), digits = 2)
+mass_g
+
+> help(abs)
+> abs(-15.5)
+[1] 15.5
+> help("round")
+> round(4.483847, digits = 2)
+[1] 4.48
+> round(4.483847, digits = 1)
+[1] 4.5
+> round(3.8)
+[1] 4
+> help("tolower")
+> tolower(species)
+Error in tolower(species) : object 'species' not found
+> tolower(species)
+Error in tolower(species) : object 'species' not found
+> toupper(species)
+Error in toupper(species) : object 'species' not found
+> tolower("species")
+[1] "species"
+> toupper("species")
+[1] "SPECIES"
+> tolower("SPECIES")
+[1] "species"
+> sqrt(2.6)
+[1] 1.612452
+> class(sqrt(2.6))
+[1] "numeric"
+> sqrt(2.6) <- variable
+Error: object 'variable' not found
+> sqrt(2.6) <- mass_kg
+Error: object 'mass_kg' not found
+> mass_kg <- sqrt(2.6)
+> class(sqrt(2.6))
+[1] "numeric"
+> mass_kg
+[1] 1.612452
+> round(mass_kg, digits = 2)
+[1] 1.61
+> mass_g <- round(mass_kg, digits = 2)
+> mass_g
+[1] 1.61
+> mass_g <- round(sqrt(2.6), digits = 2)
+> mass_g
+[1] 1.61
+
+# exercise 5
+site1_g_carbon_m2_day <- 5
+site2_g_carbon_m2_day <- 2.3
+site1_area_m2 <- 200
+site2_area_m2 <- 450
+site1_npp_day <- site1_g_carbon_m2_day * site1_area_m2
+site2_npp_day <- site2_g_carbon_m2_day * site2_area_m2
+site1_npp_day
+site2_npp_day
+print(site1_npp_day)
+sum(site1_npp_day, site2_npp_day)
+abs(diff(site1_npp_day, site2_npp_day))
+diff(abs(site1_npp_day, site2_npp_day))
+diff(site1_npp_day, site2_npp_day)
+help("diff")
+abs(diff(site1_npp_day:site2_npp_day, 2))
+
+> site1_g_carbon_m2_day <- 5
+> site2_g_carbon_m2_day <- 2.3
+> site1_area_m2 <- 200
+> site2_area_m2 <- 450
+> site1_npp_day <- site1_g_carbon_m2_day * site1_area_m2
+> site2_npp_day <- site2_g_carbon_m2_day * site2_area_m2
+> site1_npp_day
+[1] 1000
+> site2_npp_day
+[1] 1035
+> print(site1_npp_day)
+[1] 1000
+> sum(site1_npp_day, site2_npp_day)
+[1] 2035
+> abs(diff(site1_npp_day, site2_npp_day))
+numeric(0)
+> diff(abs(site1_npp_day, site2_npp_day))
+Error in abs(site1_npp_day, site2_npp_day) : 
+  2 arguments passed to 'abs' which requires 1
+> diff(site1_npp_day, site2_npp_day)
+numeric(0)
+> help("diff")
+> abs(diff(site1_npp_day:site2_npp_day,))
+ [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+> abs(diff(site1_npp_day:site2_npp_day))
+ [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+> abs(diff(site1_npp_day:site2_npp_day, 2))
+ [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+
+# exercise 6
+
+# the following command will yeild the monthly averages of precipitation over years 1961-2013 and show a line plot
+ppt_data <- read.csv("gainesville-precip.csv", header = FALSE)
+monthly_mean_ppt <- colMeans(ppt_data)
+plot(monthly_mean_ppt, xlab = "Month", ylab = "Mean Precipitation")
